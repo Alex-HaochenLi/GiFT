@@ -1,0 +1,36 @@
+{
+    "bf16": {
+        "enabled": true
+    },
+    "zero_optimization": {
+        "stage": 2
+    },
+    "zero_allow_untested_optimizer": true,
+    "dump_state": false,
+    "gradient_accumulation_steps": 16,
+    "gradient_clipping": 1.0,
+    "steps_per_print": 2000,
+    "train_batch_size": "auto",
+    "train_micro_batch_size_per_gpu": 1,
+    "wall_clock_breakdown": false,
+    "optimizer": {
+        "type": "AdamW",
+        "params": {
+            "lr": 2e-5,
+            "betas": [ 0.9, 0.999 ],
+            "eps": 1e-6,
+            "weight_decay": 0.05
+        }
+    },
+    "scheduler": {
+        "type": "WarmupDecayLR",
+        "params": {
+            "last_batch_iteration": -1,
+            "warmup_min_lr": 5e-6,
+            "warmup_max_lr": 2e-5,
+            "warmup_num_steps": 30,
+            "warmup_type": "linear",
+            "total_num_steps": "auto"
+        }
+    }
+}
