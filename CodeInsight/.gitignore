@@ -5,7 +5,6 @@ __pycache__/
 **/.idea/
 # C extensions
 *.so
-CodeInsight/
 
 # Distribution / packaging
 .Python
@@ -128,4 +127,3 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
-data/

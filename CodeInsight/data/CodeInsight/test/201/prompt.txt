@@ -1,0 +1,6 @@
+Convert all categorical columns to dummy/indicator int variables in dataframe df0
+
+import pandas as pd
+
+def test(df0):
+
